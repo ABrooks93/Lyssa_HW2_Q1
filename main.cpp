@@ -15,42 +15,12 @@ struct Check {
 
     friend ostream& operator<<(ostream& var, Check& c);
 
-    bool operator>(const Check& c);
-    bool operator>(float f);
-};
+    bool operator>(const Check &c);
 
-class CheckBook {
-private:
-    float balance;
-    Check* chkPtr;
-    float lastDeposit;
-    int numOfChecks;
-    int checkBookSize;
+}; 
 
-public:
-    float getBalance() const;
-    float getLastDeposit() const;
-    int getNumOfChecks() const;
-    int getCheckBookSize() const;
-    void setBalance(float bal);
-    void setLastDeposit(float deposit);
-    void setNumOfChecks(int num);
-    void setCheckBookSize(int size);
-
-    CheckBook();
-    CheckBook(float bal);
-    ~CheckBook();
-    CheckBook(const CheckBook& cb);
-    CheckBook& operator=(const CheckBook& cb);
-
-    void deposit(float amount);
-    bool writeCheck(Check& c_amount);
-    void displayChecks() const;
-    void checkTest(CheckBook& cb, float initialBalance);
-};
-
-ostream& operator<<(ostream& var, Check& c) {
-    var << c.CheckNum << " " << c.CheckMemo << " " << c.CheckAmount;
+ostream & operator<<(ostream &var, Check &c) {
+    var<<c.CheckNum<<" "<<c.CheckMemo<<" "<<c.CheckAmount;
     return var;
 }
 
