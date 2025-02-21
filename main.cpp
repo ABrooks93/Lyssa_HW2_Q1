@@ -1,3 +1,17 @@
+
+/*************************************************************************
+** Author : Alyssa Brooks
+** Program : hw2, q2
+** Date Created : February 19, 2025
+** Date Last Modified : February 20, 2025
+** Usage : Checkbook
+**
+** Problem:
+Defines Check and Checkbook 
+Write Check Method 
+Display Method 
+*************************************************************************/
+
 #include <iostream>
 #include <string>
 #include <vector>
